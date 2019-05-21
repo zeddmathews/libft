@@ -6,7 +6,7 @@
 /*   By: zmathews <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 11:05:16 by zmathews          #+#    #+#             */
-/*   Updated: 2019/05/21 13:17:23 by zmathews         ###   ########.fr       */
+/*   Updated: 2019/05/21 16:31:23 by zmathews         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memset(void *b, int c, size_t len) //take string, put new character, re
 	size_t			count;
 
 	cpy = (char *)b;
-	new_c = (unsigned char)c;
+	new_c = c;
 	count = 0;
 
 	while (count < len)
