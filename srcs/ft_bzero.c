@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zmathews <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 10:53:02 by zmathews          #+#    #+#             */
-/*   Updated: 2019/05/21 17:32:35 by zmathews         ###   ########.fr       */
+/*   Created: 2019/05/21 17:14:15 by zmathews          #+#    #+#             */
+/*   Updated: 2019/05/21 17:27:39 by zmathews         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-char	*ft_strcpy(char *dest, const char *src)
+void	ft_bzero(void *s, size_t n)
 {
-	int i;
-
-	i = 0;
-	while (src[i] != '\0')
+	if (n == NULL)
 	{
-		dest[i] = src[i];
-		i++;
+		return (NULL);
 	}
-	return (dest);
+	char *ns;
+	
 }
