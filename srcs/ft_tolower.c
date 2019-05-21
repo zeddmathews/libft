@@ -6,13 +6,13 @@
 /*   By: zmathews <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 14:50:12 by zmathews          #+#    #+#             */
-/*   Updated: 2019/05/20 15:35:27 by zmathews         ###   ########.fr       */
+/*   Updated: 2019/05/21 07:42:10 by zmathews         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-void	ft_tolower(int c)
+int		ft_tolower(int c)
 {
 	if ((c > 64) && (c < 91))
 		return (c + 32);

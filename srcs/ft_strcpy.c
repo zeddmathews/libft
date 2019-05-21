@@ -1,21 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zmathews <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 14:18:07 by zmathews          #+#    #+#             */
-/*   Updated: 2019/05/21 07:35:04 by zmathews         ###   ########.fr       */
+/*   Created: 2019/05/21 10:53:02 by zmathews          #+#    #+#             */
+/*   Updated: 2019/05/21 13:21:13 by zmathews         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-int		ft_isprint(int c)
+char	*ft_strcpy(char *dest, const char *src)
 {
-	if ((c > 31) && (c < 127))
-		return (1);
-	else
-		return (0);
+	int i;
+
+	i = 0;
+	while (src[i] >= '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	return (dest);
 }

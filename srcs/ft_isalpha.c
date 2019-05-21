@@ -6,12 +6,13 @@
 /*   By: zmathews <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 12:43:03 by zmathews          #+#    #+#             */
-/*   Updated: 2019/05/20 15:28:16 by zmathews         ###   ########.fr       */
+/*   Updated: 2019/05/21 10:21:57 by zmathews         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "../includes/libft.h"
 
-void	ft_isalpha(int c)
+int		ft_isalpha(int c)
 {
 	if (((c > 64) && (c < 91)) || ((c > 96) && (c < 123)))
 	{

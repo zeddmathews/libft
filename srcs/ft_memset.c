@@ -1,21 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zmathews <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 14:18:07 by zmathews          #+#    #+#             */
-/*   Updated: 2019/05/21 07:35:04 by zmathews         ###   ########.fr       */
+/*   Created: 2019/05/21 11:05:16 by zmathews          #+#    #+#             */
+/*   Updated: 2019/05/21 13:17:23 by zmathews         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
-int		ft_isprint(int c)
+void	*ft_memset(void *b, int c, size_t len) //take string, put new character, replace character
 {
-	if ((c > 31) && (c < 127))
-		return (1);
-	else
-		return (0);
+	char			*cpy;
+	unsigned char	new_c;
+	size_t			count;
+
+	cpy = (char *)b;
+	new_c = (unsigned char)c;
+	count = 0;
+
+	while (count < len)
+	{
+		cpy[count] = new_c;
+		count++;
+	}
+	return (cpy);
 }
