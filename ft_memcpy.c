@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zmathews <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 11:05:16 by zmathews          #+#    #+#             */
-/*   Updated: 2019/05/22 09:36:49 by zmathews         ###   ########.fr       */
+/*   Created: 2019/05/22 09:14:19 by zmathews          #+#    #+#             */
+/*   Updated: 2019/05/22 09:29:52 by zmathews         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len) //take string, put new character, replace character
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	char			*alt;
-	unsigned char	replace;
-	size_t			count;
+	unsigned char *dst1;
+	unsigned char *src1;
+	size_t i;
 
-	alt = (char *)b;
-	replace = (unsigned char *)c;
-	count = 0;
-
-	while (count < len)
+	dst1 = (unsigned char *)dst;
+	src1 = (unsigned char *)src;
+	i = 0;
+	while (i < n)
 	{
-		alt[count] = replace;
-		count++;
+		dst1[i] = src1[i];
+		i++;
 	}
-	return (b);
+	return (dst);
 }
