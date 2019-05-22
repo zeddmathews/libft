@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zmathews <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 12:44:02 by zmathews          #+#    #+#             */
-/*   Updated: 2019/05/20 15:31:45 by zmathews         ###   ########.fr       */
+/*   Created: 2019/05/20 14:50:12 by zmathews          #+#    #+#             */
+/*   Updated: 2019/05/22 07:20:09 by zmathews         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
-void	ft_putendl_fd(const char *s, int fd)
+int		ft_tolower(int c)
 {
-	int i;
-
-	i = 0;
-	while (s[i] != '\0')
-	{
-		ft_putchar_fd(s[i]);
-		i++;
-	}
-	ft_putchar_fd('\n');
+	if ((c > 64) && (c < 91))
+		return (c + 32);
+	if ((c > 96) && (c < 123))
+		return (c);
+	else
+		return (0);
 }

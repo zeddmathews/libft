@@ -1,22 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zmathews <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 13:39:01 by zmathews          #+#    #+#             */
-/*   Updated: 2019/05/21 10:22:23 by zmathews         ###   ########.fr       */
+/*   Created: 2019/05/20 15:02:37 by zmathews          #+#    #+#             */
+/*   Updated: 2019/05/22 09:06:32 by zmathews         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
-int		ft_isalnum(int c)
+void	*ft_strdup(const char *s1)
 {
-	if ((c > 47) && (c < 58) || ((c > 64) && (c < 91)) || ((c > 96)
-				&& (c < 123)))
-		return (1);
-	else
-		return (0);
+	char	*new;
+	int		i;
+
+	count = 0;
+	new = (char*)malloc(sizeof(char) * (ft_strlen(s1) + 1));
+	if (new == NULL)
+		return (NULL);
+	while (s1[i] != '\0')
+	{
+		new[i] = s1[i];
+		i++;
+	}
+	new[i] = '\0';
+	return (new);
 }

@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zmathews <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 12:43:43 by zmathews          #+#    #+#             */
-/*   Updated: 2019/05/20 15:31:19 by zmathews         ###   ########.fr       */
+/*   Created: 2019/05/20 12:44:15 by zmathews          #+#    #+#             */
+/*   Updated: 2019/05/22 07:18:21 by zmathews         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
-void	ft_putendl(const char *s)
+void	ft_putnbr(int n)
 {
-	int i;
-
-	i = 0;
-	while (s[i] != '\0')
+	if (n < 0)
 	{
-		ft_putchar(s[i]);
-		i++;
+		n *= -1;
+		ft_putchar('-');
 	}
-	ft_putchar('\n');
+	if (n > 9)
+	{
+		ft_putnbr(n / 10);
+	}
+	ft_putchar(n % 10 + 48);
 }

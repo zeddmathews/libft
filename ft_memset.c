@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zmathews <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 07:45:49 by zmathews          #+#    #+#             */
-/*   Updated: 2019/05/20 15:33:34 by zmathews         ###   ########.fr       */
+/*   Created: 2019/05/21 11:05:16 by zmathews          #+#    #+#             */
+/*   Updated: 2019/05/22 07:01:16 by zmathews         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
-void	ft_putstr(const char *s)
+void	*ft_memset(void *b, int c, size_t len) //take string, put new character, replace character
 {
-	int i;
+	char			*alt;
+	unsigned char	replace;
+	size_t			count;
 
-	i = 0;
-	while (s[i] != '\0')
+	alt = (char *)b;
+	replace = c;
+	count = 0;
+
+	while (count < len)
 	{
-		ft_putchar(s[i]);
-		i++;
+		alt[count] = replace;
+		count++;
 	}
+	return (b);
 }

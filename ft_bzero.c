@@ -6,18 +6,13 @@
 /*   By: zmathews <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 17:14:15 by zmathews          #+#    #+#             */
-/*   Updated: 2019/05/21 17:27:39 by zmathews         ###   ########.fr       */
+/*   Updated: 2019/05/22 07:12:55 by zmathews         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {
-	if (n == NULL)
-	{
-		return (NULL);
-	}
-	char *ns;
-	
+	ft_memset(s, 0, n);
 }

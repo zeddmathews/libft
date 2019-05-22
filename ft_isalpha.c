@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zmathews <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 12:44:15 by zmathews          #+#    #+#             */
-/*   Updated: 2019/05/20 15:32:15 by zmathews         ###   ########.fr       */
+/*   Created: 2019/05/20 12:43:03 by zmathews          #+#    #+#             */
+/*   Updated: 2019/05/22 07:15:11 by zmathews         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
-void	ft_putnbr(int n)
+int		ft_isalpha(int c)
 {
-	if (n < 0)
+	if (((c > 64) && (c < 91)) || ((c > 96) && (c < 123)))
 	{
-		n *= -1;
-		ft_putchar('-');
+		return (c);
 	}
-	if (n > 9)
+	else
 	{
-		ft_putnbr(n / 10);
+		return (0);
 	}
-	ft_putchar(n % 10 + 48);
 }

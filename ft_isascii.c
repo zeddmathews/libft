@@ -1,23 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zmathews <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 14:50:12 by zmathews          #+#    #+#             */
-/*   Updated: 2019/05/21 07:42:10 by zmathews         ###   ########.fr       */
+/*   Created: 2019/05/20 14:08:00 by zmathews          #+#    #+#             */
+/*   Updated: 2019/05/22 07:15:24 by zmathews         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
-int		ft_tolower(int c)
+int		ft_isascii(int c)
 {
-	if ((c > 64) && (c < 91))
-		return (c + 32);
-	if ((c > 96) && (c < 123))
-		return (c);
+	if ((c >= 0) && (c <= 127))
+		return (1);
 	else
 		return (0);
 }
