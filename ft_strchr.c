@@ -1,31 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zmathews <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 11:05:16 by zmathews          #+#    #+#             */
-/*   Updated: 2019/05/23 08:09:30 by zmathews         ###   ########.fr       */
+/*   Created: 2019/05/23 09:20:55 by zmathews          #+#    #+#             */
+/*   Updated: 2019/05/23 10:18:30 by zmathews         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+char	*ft_strchr(char *s, int c)
 {
-	char			*alt;
-	unsigned char	replace;
-	size_t			count;
+	int i;
 
-	alt = (char *)b;
-	replace = c;
-	count = 0;
-
-	while (count < len)
+	i = 0;
+	if (c == '\0')
+		return ((char *)s);
+	while (s[i])
 	{
-		alt[count] = replace;
-		count++;
+		if (s[i] == c)
+			return ((char *)s + i);
+		i++;
 	}
-	return (b);
+	return (NULL);
 }

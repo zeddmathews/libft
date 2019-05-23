@@ -1,9 +1,9 @@
 #include <stdio.h>
-#include "../includes/libft.h"
+#include "../libft.h"
 
 int main () {
-   const char str[] = "http://www.tutorialspoint.com";
-   const char ch = '.';
+   char str[] = "http://www.tutorialspoint.com";
+   char ch = 'a';
    char *ret;
 
    ret = ft_strchr(str, ch);
