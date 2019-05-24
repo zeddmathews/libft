@@ -6,7 +6,7 @@
 /*   By: zmathews <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 12:44:02 by zmathews          #+#    #+#             */
-/*   Updated: 2019/05/22 07:18:09 by zmathews         ###   ########.fr       */
+/*   Updated: 2019/05/24 10:29:14 by zmathews         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ void	ft_putendl_fd(const char *s, int fd)
 	i = 0;
 	while (s[i] != '\0')
 	{
-		ft_putchar_fd(s[i]);
+		ft_putchar_fd(s[i], fd);
 		i++;
 	}
-	ft_putchar_fd('\n');
+	ft_putchar_fd('\n', fd);
 }

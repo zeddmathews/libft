@@ -6,15 +6,15 @@
 /*   By: zmathews <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 14:21:04 by zmathews          #+#    #+#             */
-/*   Updated: 2019/05/22 14:32:22 by zmathews         ###   ########.fr       */
+/*   Updated: 2019/05/24 10:00:34 by zmathews         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*(char *dest, const char *src, size_t len)
+char	*ft_strncpy(char *dest, const char *src, size_t len)
 {
-	int i;
+	size_t i;
 
 	i = 0;
 	while (i < len)
