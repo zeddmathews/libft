@@ -1,36 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zmathews <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/22 09:32:34 by zmathews          #+#    #+#             */
-/*   Updated: 2019/05/27 14:26:30 by zmathews         ###   ########.fr       */
+/*   Created: 2019/05/27 07:24:25 by zmathews          #+#    #+#             */
+/*   Updated: 2019/05/27 07:49:13 by zmathews         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
+int		ft_strcmp(const char *s1, const char *s2)
 {
-	unsigned char	*dst1;
-	unsigned char	*src1;
-	unsigned char	replace;
-	size_t			i;
+	unsigned const char	*str1;
+	unsigned const char	*str2;
+	int					i;
 
-	dst1 = (unsigned char *)dst;
-	src1 = (unsigned char *)src;
-	replace = c;
+	str1 = (unsigned const char *)s1;
+	str2 = (unsigned const char *)s2;
 	i = 0;
-	while (i < n)
+	while (str1[i] == str2[i] && str1[i] != '\0' && str2[i] != '\0')
 	{
-		dst1[i] = src1[i];
-		if (src1[i] == c)
-		{
-			return (&dst1[i + 1]);
-		}
 		i++;
 	}
-	return (NULL);
+	return (str1[i] - str2[i]);
 }
