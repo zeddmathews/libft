@@ -6,11 +6,11 @@
 /*   By: mimeyer <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 20:06:00 by mimeyer           #+#    #+#             */
-/*   Updated: 2019/05/21 21:31:06 by mimeyer          ###   ########.fr       */
+/*   Updated: 2019/05/29 17:43:12 by zmathews         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../libft.h"
 #include <stdio.h>
 
 int main(void)
