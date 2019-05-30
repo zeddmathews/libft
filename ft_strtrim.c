@@ -6,49 +6,35 @@
 /*   By: zmathews <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 15:16:51 by zmathews          #+#    #+#             */
-/*   Updated: 2019/05/29 17:42:45 by zmathews         ###   ########.fr       */
+/*   Updated: 2019/05/30 10:37:52 by zmathews         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 char	*ft_strtrim(const char *s)
 {
 	size_t i;
 	size_t index;
-	size_t alt;
-	size_t back;
+	size_t j;
 	char *str;
 
 	i = 0;
 	index = 0;
-	back = -1;
-	str = malloc(sizeof(char) * (ft_strlen(s) + 1));
-	while (s[i] == ' ' || s[i] == '\t' || s[i] == '\n')
-	{
-		i++;
+	j = 0;
+	while (s[index] == ' ' || s[index] == '\t' || s[index] == '\n')
 		index++;
-		back++;
-	}
-	if (s[i] != ' ' || s[i] != '\t' || s[i] != '\n')
+	i = ft_strlen(s);
+	while (s[i] == ' ' || s[i] == '\0' || s[i] == '\t' || s[i] == '\n')
+		i--;
+	str = malloc(sizeof(char) * ((i - index) + 1));
+	while (index < i + 1)
 	{
-		while (s[index] != '\0')
-		{
-			index++;
-			back++;
-		}
+		str[j] = s[index];
+		index++;
+		j++;
 	}
-	if (s[back] == ' ' || s[back] == '\t' || s[back] == '\n')
-	{
-		while (s[back] == ' ' || s[back] == '\t' || s[back] == '\n')
-			back--;
-	}
-	while (i < back)
-	{
-		str[alt] = s[i];
-		i++;
-		alt++;
-	}
-	str[alt] = '\0';
+	str[j] = '\0';
 	return (str);
 }
