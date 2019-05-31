@@ -6,7 +6,7 @@
 /*   By: zmathews <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 15:59:27 by zmathews          #+#    #+#             */
-/*   Updated: 2019/05/29 17:45:10 by zmathews         ###   ########.fr       */
+/*   Updated: 2019/05/31 14:04:08 by zmathews         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,5 +55,21 @@ void	ft_putstr_fd(char const *s, int fd);
 void	ft_putendl_fd(char const *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 char	*ft_strtrim(const char *s);
+void	*ft_memalloc(size_t size);
+void	ft_memdel(void **ap);
+char	*ft_strnew(size_t size);
+void	ft_strdel(char **as);
+void	ft_strclr(char *s);
+void	ft_striter(char *s, void (*f)(char *));
+void	ft_striteri(char *s, void (*f) (unsigned int, char *));
+char	*ft_strmap(const char *s, char (*f)(char));
+char	*ft_strmapi(const char *s, char (*f)(unsigned int, char));
+int		ft_strequ(const char *s1, const char *s2);
+int		ft_strnequ(const char *s1, const char *s2, size_t n);
+char	*ft_strsub(const char *s, unsigned int start, size_t len);
+char	*ft_strjoin(const char *s1, const char *s2);
+char	*ft_strtrim(const char *s);
+char	**ft_strsplit(const char *s, char c);
+char	*ft_itoa(int num);
 
 #endif
