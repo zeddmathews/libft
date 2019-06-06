@@ -6,7 +6,7 @@
 /*   By: zmathews <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 14:21:04 by zmathews          #+#    #+#             */
-/*   Updated: 2019/05/27 07:51:30 by zmathews         ###   ########.fr       */
+/*   Updated: 2019/06/06 15:11:15 by zmathews         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,8 @@ char	*ft_strncpy(char *dest, const char *src, size_t len)
 	size_t i;
 
 	i = 0;
-	while (i < len)
+	while (i < len - 1)
 	{
-		if (src[i] == '\0')
-			break ;
 		dest[i] = src[i];
 		i++;
 	}

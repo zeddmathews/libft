@@ -6,7 +6,7 @@
 /*   By: zmathews <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 10:44:36 by zmathews          #+#    #+#             */
-/*   Updated: 2019/05/31 13:34:26 by zmathews         ###   ########.fr       */
+/*   Updated: 2019/06/06 13:21:48 by zmathews         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_itoa(int num)
 	char	*str;
 
 	n = num;
-	i = ft_for_itoa(n);
+	i = (int)ft_for_itoa(n);
 	if (!(str = (char*)malloc(sizeof(char) * (i + 1))))
 		return (NULL);
 	str[i--] = '\0';
