@@ -6,7 +6,7 @@
 /*   By: zmathews <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 14:50:12 by zmathews          #+#    #+#             */
-/*   Updated: 2019/05/22 07:20:09 by zmathews         ###   ########.fr       */
+/*   Updated: 2019/06/10 14:19:09 by zmathews         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,6 @@
 int		ft_tolower(int c)
 {
 	if ((c > 64) && (c < 91))
-		return (c + 32);
-	if ((c > 96) && (c < 123))
-		return (c);
-	else
-		return (0);
+		return (c += 32);
+	return (c);
 }

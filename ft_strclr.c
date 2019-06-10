@@ -6,7 +6,7 @@
 /*   By: zmathews <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 10:37:08 by zmathews          #+#    #+#             */
-/*   Updated: 2019/06/06 12:27:42 by zmathews         ###   ########.fr       */
+/*   Updated: 2019/06/10 08:25:09 by zmathews         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,6 @@ void	ft_strclr(char *s)
 {
 	size_t size;
 
-	size = 0;
+	size = ft_strlen(s);
 	ft_memset(s, '\0', size);
 }
