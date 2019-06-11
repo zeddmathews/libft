@@ -6,7 +6,7 @@
 /*   By: zmathews <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 11:53:41 by zmathews          #+#    #+#             */
-/*   Updated: 2019/06/06 14:01:06 by zmathews         ###   ########.fr       */
+/*   Updated: 2019/06/11 11:22:12 by zmathews         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,20 +25,16 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	{
 		i = len;
 		while (i > 0)
-			{
-				dst1[i - 1] = src1[i - 1];
-				i--;
-			}
-		return (dst);
-	}
-	else
-	{
-		while (i < len)
 		{
-			dst1[i] = src1[i];
-			i++;
+			dst1[i - 1] = src1[i - 1];
+			i--;
 		}
 		return (dst);
 	}
-	return (0);
+	while (i < len)
+	{
+		dst1[i] = src1[i];
+		i++;
+	}
+	return (dst);
 }

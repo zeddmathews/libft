@@ -6,7 +6,7 @@
 /*   By: zmathews <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 10:41:05 by zmathews          #+#    #+#             */
-/*   Updated: 2019/06/06 13:24:34 by zmathews         ###   ########.fr       */
+/*   Updated: 2019/06/11 09:12:00 by zmathews         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static int	ft_strcnt(const char *s, char c)
 {
 	unsigned int s_count;
-	
+
 	s_count = 0;
 	while (*s != '\0')
 	{
@@ -29,12 +29,13 @@ static int	ft_strcnt(const char *s, char c)
 	return (s_count);
 }
 
-char	**ft_strsplit(const char *s, char c)
+char		**ft_strsplit(const char *s, char c)
 {
-	int i;
-	int k;
-	int ai;
-	char **sa;
+	int		i;
+	int		k;
+	int		ai;
+	char	**sa;
+
 	i = 0;
 	ai = 0;
 	if (!s || !(sa = (char **)malloc(sizeof(char *) * (ft_strcnt(s, c) + 1))))
@@ -50,9 +51,9 @@ char	**ft_strsplit(const char *s, char c)
 		{
 			sa[ai] = ft_strsub(s, k, i - k);
 			ai++;
-	}
-	sa[ai] = NULL;
-	return (sa);
+		}
+		sa[ai] = NULL;
+		return (sa);
 	}
 	return (0);
 }
