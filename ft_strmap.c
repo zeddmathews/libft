@@ -6,7 +6,7 @@
 /*   By: zmathews <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 11:05:26 by zmathews          #+#    #+#             */
-/*   Updated: 2019/06/11 09:08:43 by zmathews         ###   ########.fr       */
+/*   Updated: 2019/06/13 09:01:22 by zmathews         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strmap(const char *s, char (*f)(char))
 	char	*str;
 
 	i = 0;
-	str = malloc(sizeof(char) * ft_strlen(s) + 1);
+	str = (char *)malloc(sizeof(char) * ft_strlen(s) + 1);
 	while (s[i] != '\0')
 	{
 		str[i] = f(s[i]);
