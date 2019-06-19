@@ -6,7 +6,7 @@
 /*   By: zmathews <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 10:41:05 by zmathews          #+#    #+#             */
-/*   Updated: 2019/06/13 15:54:09 by zmathews         ###   ########.fr       */
+/*   Updated: 2019/06/19 09:48:38 by zmathews         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,11 +49,10 @@ char		**ft_strsplit(const char *s, char c)
 			i++;
 		if (i > k)
 		{
-			sa[ai] = ft_strsub(s, k, i);
+			sa[ai] = ft_strsub(s, k, i - k);
 			ai++;
 		}
-		sa[ai] = NULL;
-		return (sa);
 	}
-	return (0);
+	sa[ai] = NULL;
+	return (sa);
 }
