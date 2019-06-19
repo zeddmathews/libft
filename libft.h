@@ -6,7 +6,7 @@
 /*   By: zmathews <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 15:59:27 by zmathews          #+#    #+#             */
-/*   Updated: 2019/06/06 12:36:20 by zmathews         ###   ########.fr       */
+/*   Updated: 2019/06/19 15:55:08 by zmathews         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,6 @@ char	*ft_strjoin(const char *s1, const char *s2);
 char	*ft_strtrim(const char *s);
 char	**ft_strsplit(const char *s, char c);
 char	*ft_itoa(int num);
-char	*ft_for_itoa(int num);
+int		ft_numlen(long num);
 
 #endif
