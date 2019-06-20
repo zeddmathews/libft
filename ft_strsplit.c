@@ -6,13 +6,13 @@
 /*   By: zmathews <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 10:41:05 by zmathews          #+#    #+#             */
-/*   Updated: 2019/06/19 09:48:38 by zmathews         ###   ########.fr       */
+/*   Updated: 2019/06/20 15:40:47 by zmathews         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_strcnt(const char *s, char c)
+static int	ft_strcnt(char const *s, char c)
 {
 	unsigned int s_count;
 
@@ -29,7 +29,7 @@ static int	ft_strcnt(const char *s, char c)
 	return (s_count);
 }
 
-char		**ft_strsplit(const char *s, char c)
+char		**ft_strsplit(char const *s, char c)
 {
 	int		i;
 	int		k;

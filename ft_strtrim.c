@@ -6,13 +6,13 @@
 /*   By: zmathews <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 15:16:51 by zmathews          #+#    #+#             */
-/*   Updated: 2019/06/13 09:03:40 by zmathews         ###   ########.fr       */
+/*   Updated: 2019/06/20 15:40:07 by zmathews         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(const char *s)
+char	*ft_strtrim(char const *s)
 {
 	size_t	i;
 	size_t	index;

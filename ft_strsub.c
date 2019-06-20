@@ -6,13 +6,13 @@
 /*   By: zmathews <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 14:53:23 by zmathews          #+#    #+#             */
-/*   Updated: 2019/06/13 09:03:03 by zmathews         ###   ########.fr       */
+/*   Updated: 2019/06/20 15:38:08 by zmathews         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strsub(const char *s, unsigned int start, size_t len)
+char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
 	char	*str;

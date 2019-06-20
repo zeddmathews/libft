@@ -6,13 +6,13 @@
 /*   By: zmathews <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 11:30:46 by zmathews          #+#    #+#             */
-/*   Updated: 2019/05/28 11:48:44 by zmathews         ###   ########.fr       */
+/*   Updated: 2019/06/20 15:38:55 by zmathews         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strequ(const char *s1, const char *s2)
+int		ft_strequ(char const *s1, char const *s2)
 {
 	return (ft_strcmp(s1, s2) ? 0 : 1);
 }
