@@ -6,7 +6,7 @@
 /*   By: zmathews <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 13:16:02 by zmathews          #+#    #+#             */
-/*   Updated: 2019/06/11 16:12:50 by zmathews         ###   ########.fr       */
+/*   Updated: 2019/06/21 12:09:41 by zmathews         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strrchr(const char *s, int c)
 
 	i = 0;
 	if (s[i] == '\0')
-		return ((char *)s);
+		return (NULL);
 	while (s[i] != '\0')
 		i++;
 	if (s[i] == c)
