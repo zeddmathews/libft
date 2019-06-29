@@ -6,7 +6,7 @@
 #    By: zmathews <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/24 09:31:43 by zmathews          #+#    #+#              #
-#    Updated: 2019/06/21 11:43:49 by zmathews         ###   ########.fr        #
+#    Updated: 2019/06/29 13:11:52 by zmathews         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,6 +66,7 @@ SRC = ft_memset.c \
 	  ft_strsplit.c \
 	  ft_itoa.c \
 	  ft_numlen.c \
+	  ft_wc.c \
 
 INC = libft.h
 
@@ -123,6 +124,7 @@ _O = ft_memset.o \
 	  ft_strsplit.o \
 	  ft_itoa.o \
 	  ft_numlen.o \
+	  ft_wc.o \
 
 all: $(NAME)
 

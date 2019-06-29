@@ -1,42 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_wc.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zmathews <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/30 10:44:36 by zmathews          #+#    #+#             */
-/*   Updated: 2019/06/26 08:49:34 by zmathews         ###   ########.fr       */
+/*   Created: 2019/06/29 13:06:14 by zmathews          #+#    #+#             */
+/*   Updated: 2019/06/29 13:09:59 by zmathews         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char	*ft_itoa(int num)
+int		ft_wc(char const *s, char c)
 {
-	int		i;
-	long	n;
-	char	*str;
+	unsigned int wc;
 
-	n = num;
-	i = (int)ft_numlen(n);
-	if (!(str = (char*)malloc(sizeof(char) * (i + 1))))
-		return (NULL);
-	str[i--] = '\0';
-	if (n == 0)
+	wc = 0;
+	while (*s != '\0')
 	{
-		str[0] = 48;
-		return (str);
+		while (*s != '\0' && *s == c)
+			s++;
+		if (*s != '\0')
+			wc++;
+		while (*s != '\0' && *s != c)
+			s++;
 	}
-	if (n < 0)
-	{
-		str[0] = '-';
-		n *= -1;
-	}
-	while (n > 0)
-	{
-		str[i--] = 48 + (n % 10);
-		n = n / 10;
-	}
-	return (str);
+	return (wc);
 }

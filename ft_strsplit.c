@@ -6,28 +6,11 @@
 /*   By: zmathews <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 10:41:05 by zmathews          #+#    #+#             */
-/*   Updated: 2019/06/20 15:40:47 by zmathews         ###   ########.fr       */
+/*   Updated: 2019/06/29 13:06:43 by zmathews         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static int	ft_strcnt(char const *s, char c)
-{
-	unsigned int s_count;
-
-	s_count = 0;
-	while (*s != '\0')
-	{
-		while (*s != '\0' && *s == c)
-			s++;
-		if (*s != '\0')
-			s_count++;
-		while (*s != '\0' && *s != c)
-			s++;
-	}
-	return (s_count);
-}
 
 char		**ft_strsplit(char const *s, char c)
 {
@@ -38,7 +21,7 @@ char		**ft_strsplit(char const *s, char c)
 
 	i = 0;
 	ai = 0;
-	if (!s || !(sa = (char **)malloc(sizeof(char *) * (ft_strcnt(s, c) + 1))))
+	if (!s || !(sa = (char **)malloc(sizeof(char *) * (ft_wc(s, c) + 1))))
 		return (NULL);
 	while (s[i] != '\0')
 	{
